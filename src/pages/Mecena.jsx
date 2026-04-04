@@ -2,7 +2,7 @@ export default function Mecena() {
   const mecenes = [
     {
       name: "MBDA",
-      image: "/images/mbda.png",
+      image: "/images/mbda.jpg",
       url: "https://www.mbda-systems.com/",
       description: "Partenaire mécène de l’événement.",
     },
