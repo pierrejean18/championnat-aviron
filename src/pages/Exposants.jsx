@@ -1,116 +1,163 @@
+import "./Exposants.css";
+
 export default function Exposants() {
+  const exposants = [
+    {
+      name: "CREW LINE",
+      description: "Équipement et matériel d’aviron.",
+      url: "https://www.crewlinesports.com/fr",
+      image: "/images/crewline.png",
+      status: "confirmé",
+    },
+    {
+      name: "SD Rowing FILIPPI",
+      description: "Constructeur et matériel d’aviron.",
+      url: "https://www.sd-rowing.com/",
+      image: "/images/sdrowing.jfif",
+      status: "confirmé",
+    },
+    {
+      name: "Falcon",
+      description: "Matériel et solutions pour l’aviron.",
+      url: "https://falconracing-europe.com/fr",
+      image: "/images/falcon.png",
+      status: "confirmé",
+    },
+    {
+      name: "AVE",
+      description: "Exposant présent sur l’événement.",
+      url: "",
+      image: "",
+      status: "à préciser",
+    },
+    {
+      name: "WINTECH",
+      description: "Constructeur / matériel d’aviron.",
+      url: "https://wintechfrance.com/",
+      image: "/images/wintech.png",
+      status: "confirmé",
+    },
+    {
+      name: "PYERO ILLUSTRATEUR",
+      description: "Illustration et création graphique.",
+      url: "https://www.facebook.com/p/Pyero-Illustrateur-100064020427879/",
+      image: "/images/pyero.jpg",
+      status: "confirmé",
+    },
+    {
+      name: "IMSERCO NELO ROWING France",
+      description: "Matériel et distribution pour l’aviron.",
+      url: "https://www.imserco.fr/",
+      image: "/images/nelo.avif",
+      status: "confirmé",
+    },
+    {
+      name: "L’ATELIER COMPOSITE",
+      description: "Solutions composites et bateaux d’aviron.",
+      url: "https://www.lateliercomposite.fr/",
+      image: "/images/composite.png",
+      status: "confirmé",
+    },
+    {
+      name: "VEGA",
+      description: "Présence en attente de confirmation.",
+      url: "",
+      image: "",
+      status: "en attente",
+    },
+    {
+      name: "SkyGear",
+      description: "Équipement et accessoires.",
+      url: "https://www.skygear.fr/",
+      image: "/images/skygear.webp",
+      status: "confirmé",
+    },
+    {
+      name: "TECHNOGEAR",
+      description: "Exposant présent sur l’événement.",
+      url: "",
+      image: "",
+      status: "à préciser",
+    },
+  ];
+
   return (
-    <main className="page page-exposants">
-      <section className="sub-hero">
+    <main className="page exposants-page">
+      <section className="exposants-hero">
         <div className="container">
-          <p className="hero-kicker">Visibilité et soutien</p>
-          <h1>Exposants / Partenaires</h1>
-          <p className="hero-description dark-text">
-            Retrouvez ici les informations utiles pour les exposants et les
-            partenaires de l’événement.
-          </p>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="container two-columns">
-          <div className="content-card">
-            <span className="section-tag">Contact</span>
-            <h2>Demande de stand ou de visibilité</h2>
-            <p>
-              Pour bénéficier d’un stand et/ou d’une banderole sur site, d’un
-              encart publicitaire dans le programme digital ou pour toute autre
-              demande, contactez :
-            </p>
-
-            <p>
-              <strong>Brigitte BLAISE</strong>
-            </p>
-            <p>
-              <strong>Téléphone portable :</strong> 06 95 25 22 24
-            </p>
-            <p>
-              <strong>Courriel :</strong>{" "}
-              <a href="mailto:brigitte.blaise@ffaviron.fr">
-                brigitte.blaise@ffaviron.fr
-              </a>
-            </p>
-          </div>
-
-          <div className="content-card">
-            <span className="section-tag">Informations</span>
-            <h2>Présence sur l’événement</h2>
-            <p>
-              Cette page accueillera la liste des exposants présents ainsi que
-              les partenaires qui soutiennent l’événement.
-            </p>
-            <p>
-              Les informations pourront être enrichies progressivement :
-              présentation, logo, lien utile, emplacement ou domaine
-              d’activité.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="section section-alt">
-        <div className="container">
-          <div className="section-heading">
+          <div className="exposants-hero-panel">
             <span className="section-tag">Exposants</span>
-            <h2>Exposants présents</h2>
-            <p className="section-intro">
-              La liste des exposants sera ajoutée ici au fur et à mesure.
+            <h1>Exposants présents</h1>
+            <p className="exposants-hero-intro">
+              Retrouvez les exposants du Championnat de France d’Aviron à Bourges.
             </p>
           </div>
-
-          <div className="exposants-empty-state">
-            <h3>Liste en cours de préparation</h3>
-            <p>
-              Aucun exposant n’est affiché pour le moment. Cette section sera
-              mise à jour dès que les informations seront disponibles.
-            </p>
-          </div>
-
-          {/*
-          Exemple futur :
-          <div className="exposants-grid">
-            <article className="exposant-card">
-              <h3>Nom de l’exposant</h3>
-              <p>Description ou activité</p>
-            </article>
-          </div>
-          */}
         </div>
       </section>
 
-      <section className="section">
+      <section className="section exposants-list-section">
         <div className="container">
-          <div className="section-heading">
-            <span className="section-tag">Partenaires</span>
-            <h2>Partenaires de l’événement</h2>
-            <p className="section-intro">
-              Les partenaires soutenant l’organisation seront présentés dans
-              cette section.
-            </p>
-          </div>
+          <div className="exposants-grid">
+            {exposants.map((exposant) => {
+              const hasImage = Boolean(exposant.image);
+              const hasUrl = Boolean(exposant.url);
 
-          <div className="exposants-empty-state">
-            <h3>Liste en cours de préparation</h3>
-            <p>
-              Les partenaires seront ajoutés ici avec, si besoin, leur logo,
-              leur nom et leur rôle dans le soutien de l’événement.
-            </p>
-          </div>
+              return (
+                <article
+                  className={`exposant-card ${
+                    !hasUrl ? "exposant-card-static" : ""
+                  }`}
+                  key={exposant.name}
+                >
+                  <div className="exposant-card-head">
+                    <span
+                      className={`exposant-badge ${
+                        exposant.status === "confirmé"
+                          ? "is-confirmed"
+                          : exposant.status === "en attente"
+                          ? "is-pending"
+                          : "is-neutral"
+                      }`}
+                    >
+                      {exposant.status}
+                    </span>
+                  </div>
 
-          {/*
-          Exemple futur :
-          <div className="partenaires-grid">
-            <article className="partenaire-card">
-              <h3>Nom du partenaire</h3>
-              <p>Type de soutien ou présentation</p>
-            </article>
+                  <div className="exposant-image-wrap">
+                    {hasImage ? (
+                      <img
+                        src={exposant.image}
+                        alt={exposant.name}
+                        className="exposant-image"
+                      />
+                    ) : (
+                      <div className="exposant-placeholder">
+                        Logo à venir
+                      </div>
+                    )}
+                  </div>
+
+                  <h3>{exposant.name}</h3>
+                  <p>{exposant.description}</p>
+
+                  {hasUrl ? (
+                    <a
+                      href={exposant.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="btn btn-primary"
+                    >
+                      Voir le site
+                    </a>
+                  ) : (
+                    <span className="exposant-soon">
+                      Informations à venir
+                    </span>
+                  )}
+                </article>
+              );
+            })}
           </div>
-          */}
         </div>
       </section>
     </main>

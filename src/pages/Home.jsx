@@ -79,24 +79,24 @@ export default function Home() {
             </p>
 
             <div className="hero-actions">
-              <a className="btn btn-secondary" href="#localisation">
-                Voir la localisation
-              </a>
-              <a className="btn btn-secondary" href="#plans">
-                Voir les plans
-              </a>
-              <a className="btn btn-secondary" href="/resultats">
-                Résultats
-              </a>
-              <a
-                className="btn btn-secondary"
-                href={mapsUrl}
-                target="_blank"
-                rel="noreferrer"
-              >
-                Y aller
-              </a>
-            </div>
+  <a
+    className="btn btn-primary"
+    href={mapsUrl}
+    target="_blank"
+    rel="noreferrer"
+  >
+    Y aller
+  </a>
+  <a className="btn btn-secondary" href="#localisation">
+    Voir la localisation
+  </a>
+  <a className="btn btn-secondary" href="#plans">
+    Voir les plans
+  </a>
+  <a className="btn btn-secondary" href="/resultats">
+    Résultats
+  </a>
+</div>
           </div>
         </div>
       </section>
@@ -116,9 +116,12 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="photo-placeholder photo-large">
-            <span>Emplacement photo principale</span>
-          </div>
+          <div className="photo-large real-photo">
+  <img
+    src="/images/brigitte.jpg"
+    alt="Site de la base d’aviron de Bourges"
+  />
+</div>
         </div>
       </section>
 
@@ -151,9 +154,12 @@ export default function Home() {
               />
             </div>
 
-            <div className="photo-placeholder photo-medium">
-              <span>Photo 4</span>
-            </div>
+            <div className="photo-medium real-photo">
+  <img
+    src="/images/aerienbourges.png"
+    alt="Vue aérienne de Bourges"
+  />
+</div>
           </div>
         </div>
       </section>
