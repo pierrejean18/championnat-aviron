@@ -56,6 +56,30 @@
   text-transform: uppercase;
 }
 
+.footer-brand-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 12px;
+}
+
+.footer-brand-texts {
+  min-width: 0;
+  flex: 1;
+}
+
+.footer-ffa-logo {
+  width: 88px;
+  height: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+  padding: 8px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+}
+
 .footer-title {
   margin: 0 0 10px;
   font-size: 1.45rem;
@@ -65,7 +89,7 @@
 }
 
 .footer-subtitle {
-  margin: 0 0 12px;
+  margin: 0;
   font-size: 1rem;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.88);
@@ -128,6 +152,16 @@
     grid-template-columns: 1fr;
     gap: 24px;
     padding: 32px 0 22px;
+  }
+
+  .footer-brand-top {
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .footer-ffa-logo {
+    width: 72px;
+    padding: 6px;
   }
 
   .footer-title {

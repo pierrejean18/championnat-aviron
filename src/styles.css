@@ -71,10 +71,6 @@ select {
   font: inherit;
 }
 
-.home {
-  min-height: 100vh;
-}
-
 .container {
   width: min(
     var(--container-width),
@@ -83,7 +79,7 @@ select {
   margin: 0 auto;
 }
 
-/* HERO */
+/* UTILITAIRES COMMUNS */
 
 .real-photo {
   border-radius: 20px;
@@ -95,118 +91,6 @@ select {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.hero {
-  position: relative;
-  height: calc(100vh - 98px);
-  display: flex;
-  align-items: center;
-  background:
-    linear-gradient(120deg, rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.38)),
-    url("/images/brigitte.jpg") center top / cover no-repeat;
-  overflow: hidden;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(circle at 20% 30%, rgba(244, 196, 0, 0.16), transparent 30%),
-    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.08), transparent 22%);
-  pointer-events: none;
-}
-
-.hero-overlay {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-}
-
-.hero-content {
-  color: var(--white);
-  max-width: 760px;
-  padding: 2rem 0;
-}
-
-.hero-panel {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1.25rem;
-  padding: 2rem 2rem 1.8rem;
-  border-radius: 28px;
-  background: rgba(10, 10, 10, 0.52);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.32);
-}
-
-.hero-kicker {
-  margin: 0;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.55rem;
-  padding: 0.5rem 0.85rem;
-  border-radius: 999px;
-  background: rgba(244, 196, 0, 0.14);
-  border: 1px solid rgba(244, 196, 0, 0.35);
-  color: #ffe27a;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-size: 0.78rem;
-  font-weight: 800;
-}
-
-.hero h1 {
-  margin: 0;
-  font-size: clamp(2.5rem, 6vw, 5.4rem);
-  line-height: 0.98;
-  letter-spacing: -0.03em;
-  max-width: 12ch;
-  text-wrap: balance;
-}
-
-.hero-date {
-  margin: 0;
-  font-size: 1.08rem;
-  line-height: 1.7;
-  color: rgba(255, 255, 255, 0.9);
-  max-width: 52ch;
-}
-
-.hero-description {
-  margin: 0;
-  max-width: 640px;
-  font-size: 1.05rem;
-  line-height: 1.75;
-  color: rgba(255, 255, 255, 0.92);
-}
-
-.hero-actions {
-  margin-top: 0.4rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.85rem;
-}
-
-.hero .btn-secondary {
-  min-height: 48px;
-  padding: 0.95rem 1.2rem;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.28);
-  color: var(--white);
-  backdrop-filter: blur(6px);
-}
-
-.hero .btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.18);
-  border-color: rgba(255, 255, 255, 0.5);
-}
-
-.hero .btn-primary {
-  min-height: 48px;
 }
 
 /* BOUTONS */
@@ -332,45 +216,6 @@ select {
   color: #6b7280;
 }
 
-/* PRESENTATION */
-
-.presentation-grid {
-  display: grid;
-  grid-template-columns: 1.05fr 1fr;
-  gap: 2rem;
-  align-items: center;
-}
-
-.text-block p {
-  font-size: 1rem;
-  line-height: 1.85;
-  color: var(--text-muted);
-}
-
-/* PHOTOS */
-
-.photo-placeholder {
-  border-radius: 20px;
-  border: 2px dashed #bca94b;
-  background: linear-gradient(135deg, #fff3bf, #f4c400);
-  color: var(--black);
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 1rem;
-  box-shadow: var(--shadow-soft);
-}
-
-.photo-large {
-  min-height: 380px;
-}
-
-.photo-medium {
-  min-height: 180px;
-}
-
 /* CONTACT */
 
 .contact-card {
@@ -436,70 +281,6 @@ select {
 
 .contact-block a:hover {
   color: var(--yellow-dark);
-}
-
-/* GALERIE */
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.25rem;
-}
-
-/* LOCALISATION */
-
-.location-card {
-  display: grid;
-  grid-template-columns: 0.95fr 1.2fr;
-  gap: 1.5rem;
-  background: var(--white);
-  border-radius: 22px;
-  padding: 1.5rem;
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.07);
-}
-
-.location-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-width: 0;
-}
-
-.location-text h3 {
-  margin-top: 0;
-  margin-bottom: 0.75rem;
-  font-size: 1.35rem;
-  color: var(--black);
-}
-
-.location-text p {
-  margin-top: 0;
-  line-height: 1.75;
-  color: var(--text-muted);
-}
-
-.map-box {
-  min-height: 380px;
-  border-radius: 18px;
-  overflow: hidden;
-  border: 1px solid var(--border);
-  background: #fffef8;
-}
-
-.map-header {
-  padding: 0.9rem 1rem;
-  font-weight: 700;
-  background: var(--yellow-soft);
-  border-bottom: 1px solid var(--border);
-  color: var(--black);
-  font-size: 0.95rem;
-}
-
-.map-box iframe {
-  display: block;
-  height: calc(100% - 48px);
-  width: 100%;
-  border: 0;
 }
 
 /* EQUIPIERS */
@@ -830,211 +611,6 @@ select {
   color: var(--text-muted);
 }
 
-/* PDF PREVIEW */
-
-.pdf-preview-card {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 1.5rem;
-  background: var(--white);
-  border-radius: 22px;
-  padding: 1.5rem;
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.07);
-}
-
-.pdf-preview-visual {
-  min-height: 380px;
-  border-radius: 18px;
-  border: 2px dashed #bca94b;
-  background: linear-gradient(135deg, #fff3bf, #f4c400);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 1rem;
-  color: var(--black);
-  font-weight: 700;
-}
-
-.pdf-preview-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.pdf-preview-content h3 {
-  margin-top: 0;
-  margin-bottom: 0.75rem;
-  font-size: 1.35rem;
-  color: var(--black);
-}
-
-.pdf-preview-content p {
-  line-height: 1.75;
-  color: var(--text-muted);
-}
-
-.pdf-preview-actions {
-  margin-top: 1.5rem;
-}
-
-
-
-/* ARTICLE SLIDER */
-
-.article-slider-shell {
-  position: relative;
-  display: grid;
-  grid-template-columns: 64px minmax(0, 1fr) 64px;
-  align-items: center;
-  gap: 1rem;
-  margin-top: 2rem;
-}
-
-.article-slider-window {
-  overflow: hidden;
-  width: 100%;
-}
-
-.article-slider-track {
-  display: flex;
-  width: 100%;
-  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
-  will-change: transform;
-}
-
-.article-slide {
-  min-width: 100%;
-  display: grid;
-  grid-template-columns: 1.05fr 1fr;
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: 26px;
-  overflow: hidden;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.1);
-}
-
-.article-slide-image {
-  position: relative;
-  min-height: 420px;
-  overflow: hidden;
-}
-
-.article-slide-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform: scale(1);
-  transition: transform 0.6s ease;
-}
-
-.article-slide:hover .article-slide-image img {
-  transform: scale(1.04);
-}
-
-.article-slide-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(0, 0, 0, 0.18),
-    rgba(0, 0, 0, 0.48)
-  );
-  pointer-events: none;
-}
-
-.article-slide-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 2rem;
-  background:
-    radial-gradient(circle at top right, rgba(244, 196, 0, 0.12), transparent 35%),
-    var(--white);
-}
-
-.article-slide-meta {
-  display: flex;
-  align-items: center;
-  gap: 0.55rem;
-  margin-bottom: 1rem;
-  font-size: 0.92rem;
-  color: #5b5b5b;
-  font-weight: 600;
-  flex-wrap: wrap;
-}
-
-.article-slide-content h3 {
-  margin: 0 0 1rem;
-  font-size: clamp(1.45rem, 2.4vw, 2rem);
-  line-height: 1.2;
-  color: var(--black);
-}
-
-.article-slide-content p {
-  margin: 0;
-  font-size: 1rem;
-  line-height: 1.75;
-  color: var(--text-muted);
-}
-
-.article-slide-actions {
-  margin-top: 1.7rem;
-}
-
-.article-nav-arrow {
-  width: 56px;
-  height: 56px;
-  border: none;
-  border-radius: 999px;
-  background: linear-gradient(135deg, #111111, #2a2a2a);
-  color: var(--yellow);
-  font-size: 2rem;
-  line-height: 1;
-  cursor: pointer;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.28);
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease,
-    color 0.2s ease;
-}
-
-.article-nav-arrow:hover {
-  transform: scale(1.08);
-  box-shadow: 0 18px 30px rgba(0, 0, 0, 0.36);
-  color: #ffd84d;
-}
-
-.article-nav-arrow:active {
-  transform: scale(0.98);
-}
-
-.article-dots {
-  display: flex;
-  justify-content: center;
-  gap: 0.7rem;
-  margin-top: 1.4rem;
-  flex-wrap: wrap;
-}
-
-.article-dot {
-  width: 12px;
-  height: 12px;
-  border: none;
-  border-radius: 999px;
-  background: #d6d6d6;
-  cursor: pointer;
-  transition:
-    transform 0.25s ease,
-    background 0.25s ease,
-    width 0.25s ease;
-}
-
-.article-dot.active {
-  width: 30px;
-  background: var(--yellow-dark);
-}
-
 /* PAGE MÉCÈNES */
 
 .mecena-page {
@@ -1135,127 +711,22 @@ select {
 }
 
 @media (max-width: 980px) {
-  .presentation-grid,
-  .location-card,
-  .gallery-grid,
   .event-grid,
   .two-columns,
   .jobs-grid,
   .map-layout,
-  .bassin-card,
-  .pdf-preview-card,
-  .article-slide {
+  .bassin-card {
     grid-template-columns: 1fr;
-  }
-
-  .map-box {
-    min-height: 320px;
   }
 
   .leaflet-map {
     height: 520px;
-  }
-
-  .pdf-preview-visual {
-    min-height: 280px;
-  }
-
-  .article-slider-shell {
-    grid-template-columns: 52px minmax(0, 1fr) 52px;
-    gap: 0.75rem;
-  }
-
-  .article-slide-image {
-    min-height: 260px;
-  }
-
-  .article-slide-content {
-    padding: 1.5rem;
-  }
-
-  .article-nav-arrow {
-    width: 46px;
-    height: 46px;
-    font-size: 1.7rem;
   }
 }
 
 @media (max-width: 640px) {
   :root {
     --container-padding: 14px;
-  }
-
-  .hero {
-    min-height: auto;
-    padding: 2rem 0;
-  }
-
-  .hero-content {
-    padding: 2.5rem 0;
-  }
-
-  .hero-panel {
-    width: 100%;
-    padding: 1.35rem;
-    border-radius: 22px;
-  }
-
-  .hero h1 {
-    font-size: 2.2rem;
-    max-width: 100%;
-  }
-
-  .hero-date {
-    font-size: 0.98rem;
-    line-height: 1.6;
-  }
-
-  .hero-actions {
-    width: 100%;
-    flex-direction: column;
-  }
-
-  .hero-actions .btn {
-    width: 100%;
-  }
-
-  .article-slider-shell {
-    grid-template-columns: 1fr;
-  }
-
-  .article-nav-arrow {
-    position: absolute;
-    top: 88px;
-    z-index: 5;
-  }
-
-  .article-nav-arrow.left {
-    left: 8px;
-  }
-
-  .article-nav-arrow.right {
-    right: 8px;
-  }
-
-  .article-slide {
-    border-radius: 20px;
-  }
-
-  .article-slide-image {
-    min-height: 220px;
-  }
-
-  .article-slide-content {
-    padding: 1.2rem;
-  }
-
-  .article-slide-content h3 {
-    font-size: 1.25rem;
-  }
-
-  .article-slide-content p {
-    font-size: 0.95rem;
-    line-height: 1.6;
   }
 
   .mecena-hero {
@@ -1273,10 +744,6 @@ select {
 }
 
 @media (max-width: 520px) {
-  .hero h1 {
-    font-size: 2rem;
-  }
-
   .section h2 {
     font-size: 1.55rem;
   }
@@ -1287,17 +754,10 @@ select {
     border-radius: 18px;
   }
 
-  .location-card,
-  .pdf-preview-card,
   .content-card,
   .job-card {
     padding: 1rem;
     border-radius: 16px;
-  }
-
-  .map-header {
-    font-size: 0.88rem;
-    padding: 0.8rem 0.9rem;
   }
 
   .leaflet-map {
@@ -1308,29 +768,241 @@ select {
   .map-page-card {
     height: 430px;
   }
-
-  .photo-large {
-    min-height: 260px;
-  }
-
-  .photo-medium {
-    min-height: 160px;
-  }
 }
 
 @media (max-width: 380px) {
-  .hero-content {
-    padding: 3.5rem 0;
-  }
-
-  .hero-description,
-  .text-block p,
   .contact-intro,
-  .location-text p,
   .content-card p,
   .mecena-intro,
   .mecena-card-content p {
     font-size: 0.95rem;
     line-height: 1.6;
+  }
+}
+
+/* =========================================
+   AMELIORATIONS MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+  .section {
+    padding: 3.5rem 0;
+  }
+
+  .sub-hero {
+    padding: 3.5rem 0 2rem;
+  }
+
+  .section-heading {
+    margin-bottom: 1.4rem;
+  }
+
+  .section-intro {
+    font-size: 0.98rem;
+    line-height: 1.7;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .contact-card {
+    padding: 1.25rem;
+  }
+
+  .contact-block {
+    padding: 1rem;
+  }
+
+  .content-card,
+  .job-card,
+  .map-sidebar,
+  .legend-item,
+  .mecena-card-content {
+    padding: 1.15rem;
+  }
+
+  .download-list {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .btn,
+  .btn-sm,
+  .download-list .btn,
+  .construction-actions .btn {
+    width: 100%;
+    min-height: 48px;
+    padding: 0.95rem 1rem;
+  }
+
+  .construction-actions {
+    width: 100%;
+  }
+
+  .construction-actions .btn {
+    width: 100%;
+  }
+
+  .map-layout {
+    gap: 1rem;
+  }
+
+  .map-sidebar {
+    border-radius: 16px;
+  }
+
+  .map-embed-card {
+    height: 420px;
+  }
+
+  .map-page-card {
+    height: 500px;
+  }
+
+  .leaflet-map {
+    height: 460px;
+    border-radius: 14px;
+  }
+
+  .mecena-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .mecena-card {
+    border-radius: 18px;
+  }
+
+  .mecena-logo-box {
+    min-height: 150px;
+    padding: 1rem;
+  }
+
+  .mecena-card-content h2 {
+    font-size: 1.08rem;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --container-padding: 14px;
+  }
+
+  .section h2 {
+    font-size: 1.6rem;
+    line-height: 1.15;
+  }
+
+  .section-tag {
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+  }
+
+  .contact-intro,
+  .content-card p,
+  .job-card li,
+  .map-help,
+  .legend-item span,
+  .construction-text,
+  .mecena-intro,
+  .mecena-card-content p {
+    font-size: 0.96rem;
+    line-height: 1.65;
+  }
+
+  .contact-block h3,
+  .legend-item h3,
+  .job-card h3 {
+    font-size: 1rem;
+  }
+
+  .contact-block p {
+    line-height: 1.6;
+  }
+
+  .content-card h2 {
+    margin-bottom: 0.75rem;
+  }
+
+  .job-card ul {
+    padding-left: 1rem;
+  }
+
+  .map-sidebar,
+  .contact-card,
+  .content-card,
+  .job-card,
+  .construction-card {
+    border-radius: 16px;
+  }
+
+  .construction-card {
+    padding: 1.25rem;
+  }
+
+  .mecena-hero {
+    padding: 3rem 0 1.75rem;
+  }
+
+  .mecena-hero h1 {
+    font-size: 1.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 3rem 0;
+  }
+
+  .sub-hero {
+    padding: 3rem 0 1.75rem;
+  }
+
+  .container {
+    width: min(
+      var(--container-width),
+      calc(100% - (var(--container-padding) * 2))
+    );
+  }
+
+  .contact-card,
+  .construction-card {
+    padding: 1rem;
+  }
+
+  .contact-block,
+  .content-card,
+  .job-card,
+  .legend-item,
+  .mecena-card-content {
+    padding: 0.95rem;
+  }
+
+  .btn,
+  .btn-sm {
+    font-size: 0.95rem;
+    border-radius: 12px;
+  }
+
+  .map-embed-card {
+    height: 340px;
+  }
+
+  .map-page-card {
+    height: 420px;
+  }
+
+  .leaflet-map {
+    height: 360px;
+  }
+
+  .mecena-logo-box {
+    min-height: 130px;
+  }
+
+  .mecena-logo-box img {
+    max-height: 72px;
   }
 }

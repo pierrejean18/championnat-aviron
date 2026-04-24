@@ -6,10 +6,22 @@ export default function Footer() {
       <div className="container footer-content">
         <div className="footer-brand">
           <span className="footer-tag">Organisation</span>
-          <p className="footer-title">Championnat de France d’Aviron</p>
-          <p className="footer-subtitle">
-            Bourges · Base d&apos;Aviron Alice Milliat
-          </p>
+
+          <div className="footer-brand-top">
+            <div className="footer-brand-texts">
+              <p className="footer-title">Championnat de France d’Aviron</p>
+              <p className="footer-subtitle">
+                Bourges · Base d&apos;Aviron Alice Milliat
+              </p>
+            </div>
+
+            <img
+              src="/images/ffa.png"
+              alt="Logo Fédération Française d'Aviron"
+              className="footer-ffa-logo"
+            />
+          </div>
+
           <p className="footer-text">
             Événement organisé par l’Aviron Club de Bourges au Lac d’Auron.
           </p>

@@ -5,7 +5,7 @@ import Repas from "./pages/Repas";
 import Hebergement from "./pages/Hebergement";
 import Exposants from "./pages/Exposants";
 import Mecena from "./pages/Mecena";
-import Contact from "./pages/Contact";
+import Organisation from "./pages/Organisation";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
@@ -33,8 +33,8 @@ export default function App() {
     case "/mecena":
       Page = Mecena;
       break;
-    case "/contact":
-      Page = Contact;
+    case "/organisation":
+      Page = Organisation;
       break;
     case "/":
     default:

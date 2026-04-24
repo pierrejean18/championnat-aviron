@@ -2,12 +2,19 @@ import { useEffect, useState } from "react";
 import "./Header.css";
 
 const navItems = [
+  { href: "/equipiers", label: "Équipiers", icon: "🙌" },
   { href: "/repas", label: "Repas", icon: "🍽️" },
   { href: "/hebergement", label: "Hébergement", icon: "🛏️" },
   { href: "/exposants", label: "Exposants", icon: "🏁" },
   { href: "/mecena", label: "Mécénat", icon: "🤝" },
   { href: "/carte-site", label: "Plan du site", icon: "🗺️" },
-  { href: "/contact", label: "Contact", icon: "✉️" },
+  { href: "/organisation", label: "Organisation", icon: "🏛️" },
+  {
+    href: "https://ffaviron.regatta.time-team.fr/cns/2026",
+    label: "Résultats",
+    icon: "🏆",
+    external: true,
+  },
 ];
 
 export default function Header() {
@@ -37,7 +44,7 @@ export default function Header() {
               <div className="brand-text">
                 <span className="logo-title">Championnat de France d’Aviron</span>
                 <span className="logo-subtitle">
-                  Aviron adapté 5-6 juin • Sprint 7-8 juin 2026
+                  Aviron adapté 4-5 juin • Sprint 6-7 juin 2026
                 </span>
               </div>
 
@@ -48,9 +55,18 @@ export default function Header() {
               />
             </a>
 
-            <nav className="topbar-actions desktop-nav" aria-label="Navigation principale">
+            <nav
+              className="topbar-actions desktop-nav"
+              aria-label="Navigation principale"
+            >
               {navItems.map((item) => (
-                <a key={item.href} className="btn btn-primary btn-header" href={item.href}>
+                <a
+                  key={item.href}
+                  className="btn btn-primary btn-header"
+                  href={item.href}
+                  target={item.external ? "_blank" : undefined}
+                  rel={item.external ? "noreferrer" : undefined}
+                >
                   {item.label}
                 </a>
               ))}
@@ -67,8 +83,16 @@ export default function Header() {
 
               <div className="mobile-brand-text">
                 <span className="logo-title">Championnat de France d’Aviron</span>
-                <span className="logo-subtitle">5 au 8 juin 2026</span>
+                <span className="logo-subtitle">
+                  Aviron adapté 4-5 juin • Sprint 6-7 juin 2026
+                </span>
               </div>
+
+              <img
+                src="/images/ffa.png"
+                alt="Logo Fédération Française d'Aviron"
+                className="brand-logo mobile-logo mobile-logo-ffa"
+              />
             </a>
 
             <button
@@ -96,9 +120,11 @@ export default function Header() {
       <aside className={`mobile-sidebar ${mobileMenuOpen ? "open" : ""}`}>
         <div className="mobile-sidebar-header">
           <div className="mobile-sidebar-brand">
-            <span className="mobile-sidebar-title">Championnat de France d’Aviron</span>
+            <span className="mobile-sidebar-title">
+              Championnat de France d’Aviron
+            </span>
             <span className="mobile-sidebar-subtitle">
-              Aviron adapté 5-6 juin • Sprint 7-8 juin 2026
+              Aviron adapté 4-5 juin • Sprint 6-7 juin 2026
             </span>
           </div>
 
@@ -114,7 +140,13 @@ export default function Header() {
 
         <nav className="mobile-sidebar-nav" aria-label="Navigation mobile">
           {navItems.map((item) => (
-            <a key={item.href} href={item.href} onClick={closeMenu}>
+            <a
+              key={item.href}
+              href={item.href}
+              onClick={closeMenu}
+              target={item.external ? "_blank" : undefined}
+              rel={item.external ? "noreferrer" : undefined}
+            >
               <span className="mobile-nav-icon">{item.icon}</span>
               <span>{item.label}</span>
             </a>

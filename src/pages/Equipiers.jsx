@@ -1,66 +1,7 @@
 export default function Equipiers() {
   return (
     <div className="equipiers-page">
-      <section className="sub-hero">
-        <div className="container">
-          <p className="hero-kicker">Bourges 2026</p>
-          <h1>Équipiers</h1>
-          <p className="hero-description dark-text">
-            Toute l’équipe du Comité d’Organisation est ravie de vous annoncer
-            deux événements d’ampleur nationale qui vont se dérouler sur le Lac
-            d’Auron de Bourges.
-          </p>
-        </div>
-      </section>
 
-      <section id="evenements" className="section">
-        <div className="container">
-          <div className="section-heading">
-            <span className="section-tag">Événements</span>
-            <h2>Deux rendez-vous nationaux à Bourges</h2>
-          </div>
-
-          <div className="event-grid">
-            <article className="info-box">
-              <h3>Championnats Nationaux Sprint</h3>
-              <p>U19, U23, Masters et para-aviron</p>
-              <p>
-                <strong>Samedi 6 juin 2026</strong> et{" "}
-                <strong>dimanche 7 juin 2026</strong>
-              </p>
-            </article>
-
-            <article className="info-box">
-              <h3>Championnats de France Sport Adapté</h3>
-              <p>
-                <strong>Jeudi 4 juin 2026</strong> et{" "}
-                <strong>vendredi 5 juin 2026</strong>
-              </p>
-            </article>
-          </div>
-
-          <div className="content-card">
-            <p>
-              Pour accueillir près de 3000 personnes dont près de 1000 athlètes
-              et créer un événement exceptionnel, nous avons besoin de vous.
-            </p>
-            <p>
-              Rejoignez la Team des <strong>ÉQUIPIER BOURGES 2026</strong>,
-              composée d’une centaine de bénévoles, et devenez un maillon actif
-              de cet événement sportif.
-            </p>
-            <p>
-              Vous intégrerez une équipe expérimentée et motivée pour offrir les
-              meilleures conditions aux athlètes.
-            </p>
-            <p>
-              Apportez votre énergie, votre bonne humeur et vos compétences.
-              Ensemble, écrivons la réussite de cette 26ème organisation
-              nationale.
-            </p>
-          </div>
-        </div>
-      </section>
 
       <section className="section section-alt">
         <div className="container two-columns">
@@ -305,44 +246,7 @@ export default function Equipiers() {
         </div>
       </section>
 
-<section id="contact" className="section section-alt">
-  <div className="container">
-    <div className="contact-card">
-      <div className="contact-header">
-        <span className="section-tag">Nous contacter</span>
-        <h2>Aviron Club de Bourges</h2>
-        <p className="contact-intro">
-          Toutes les informations utiles pour joindre le club et retrouver
-          l’adresse du site.
-        </p>
-      </div>
 
-      <div className="contact-grid">
-        <div className="contact-block">
-          <h3>Adresse</h3>
-          <p>Base d'Aviron Alice Milliat</p>
-          <p>Chemin du Grand Mazières</p>
-          <p>18000 Bourges</p>
-        </div>
-
-        <div className="contact-block">
-          <h3>Contact</h3>
-          <p>
-            <a href="mailto:contact@aviron-bourges.org">
-              contact@aviron-bourges.org
-            </a>
-          </p>
-          <p>
-            <a href="tel:+33248679446">02 48 67 94 46</a>
-          </p>
-          <p>
-            <a href="tel:+33783962373">07 83 96 23 73</a>
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
     </div>
   );
 }
